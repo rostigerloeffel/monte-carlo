@@ -70,9 +70,7 @@ const Home: React.FC = () => {
     };
   }, [monteCarloHistogram]);
 
-  // Hilfsfunktion für Label-Offset
-  const xAxisLabelStyle = { value: '', position: 'insideBottom', offset: 0 };
-  const yAxisLabelStyle = { value: '', angle: -90, position: 'insideLeft', offset: 0 };
+  // Hilfsfunktion für Label-Offset (unused variables removed)
 
   return (
     <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
