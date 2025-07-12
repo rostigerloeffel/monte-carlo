@@ -1,12 +1,12 @@
 # Monte Carlo Simulation - Story Points Prognose Tool
 
-Ein kostenloses, interaktives Tool für **Monte Carlo Simulationen** zur **Story Points Prognose** und **Estimation** in agilen Projekten. Verbessere deine **Projektplanung** mit statistischen Analysen und Integration mit beliebten **Project Management** Tools wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear und mehr.
+Ein kostenloses, interaktives Tool für **Monte Carlo Simulationen** zur **Story Points Prognose** und **Estimation** in agilen Projekten. Verbessere deine **Projektplanung** mit statistischen Analysen und Integration mit beliebten **Project Management** Tools wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear, GitHub Issues, GitLab Issues, ClickUp, Basecamp und mehr.
 
 ## 🎯 Features
 
 - **Monte Carlo Simulationen** für präzise Story Points Prognosen
 - **Statistische Analysen** mit Visualisierungen und Prozentilen
-- **Integration mit Project Management Tools** wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear, Basecamp, GitHub, GitLab, ClickUp und mehr
+- **Integration mit Project Management Tools** wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear, Basecamp, GitHub Issues, GitLab Issues, ClickUp und mehr
 - **Responsive Design** für Desktop und Mobile
 - **Moderne React/TypeScript** Architektur
 - **Kostenlos und Open Source**
@@ -89,6 +89,10 @@ Diese Anwendung ist für optimale Auffindbarkeit in Suchmaschinen konfiguriert u
 - **youtrack** - YouTrack Issue Tracking
 - **trello** - Trello Kanban Board Integration
 - **linear** - Linear Projektmanagement Tool
+- **github issues** - GitHub Issues Tracking und Management
+- **gitlab issues** - GitLab Issues und Projektverwaltung
+- **clickup** - ClickUp Projektmanagement Platform
+- **basecamp** - Basecamp Team Collaboration Tool
 
 ### 📈 SEO Features:
 - **Meta Tags** für bessere Google-Indexierung
