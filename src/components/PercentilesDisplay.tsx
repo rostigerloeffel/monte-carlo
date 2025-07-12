@@ -25,7 +25,6 @@ const PercentilesDisplay: React.FC<PercentilesDisplayProps> = ({ percentiles }) 
       minWidth: '180px',
       maxWidth: '300px',
       width: '100%',
-      marginTop: 6,
       padding: '0 0.5rem'
     }}>
       <strong style={{ marginBottom: 12 }}>{t('percentiles.title')}</strong>
