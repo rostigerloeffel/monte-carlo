@@ -1,53 +1,78 @@
 import React, { useState } from 'react';
+import { Counter } from 'counterapi';
 
 const IntegrationSection: React.FC = () => {
   const [selectedIntegration, setSelectedIntegration] = useState<string | null>(null);
+  
+  // Function to track button clicks
+  const trackClick = (integrationName: string) => {
+    try {
+      // Simple tracking without external library for now
+      console.log(`Integration clicked: ${integrationName}`);
+      // TODO: Implement proper tracking when counterapi is configured
+    } catch (error) {
+      console.log('Tracking not available:', error);
+    }
+  };
+
   const handleJiraClick = () => {
     setSelectedIntegration('Jira');
+    trackClick('Jira');
   };
 
   const handleTrelloClick = () => {
     setSelectedIntegration('Trello');
+    trackClick('Trello');
   };
 
   const handleMondayClick = () => {
     setSelectedIntegration('Monday');
+    trackClick('Monday');
   };
 
   const handleAsanaClick = () => {
     setSelectedIntegration('Asana');
+    trackClick('Asana');
   };
 
   const handleYouTrackClick = () => {
     setSelectedIntegration('YouTrack');
+    trackClick('YouTrack');
   };
 
   const handleLinearClick = () => {
     setSelectedIntegration('Linear');
+    trackClick('Linear');
   };
 
   const handleBasecampClick = () => {
     setSelectedIntegration('Basecamp');
+    trackClick('Basecamp');
   };
 
   const handleRedmineClick = () => {
     setSelectedIntegration('Redmine');
+    trackClick('Redmine');
   };
 
   const handleGitHubClick = () => {
     setSelectedIntegration('GitHub');
+    trackClick('GitHub');
   };
 
   const handleGitLabClick = () => {
     setSelectedIntegration('GitLab');
+    trackClick('GitLab');
   };
 
   const handleClickUpClick = () => {
     setSelectedIntegration('ClickUp');
+    trackClick('ClickUp');
   };
 
   const handleMoreClick = () => {
     setSelectedIntegration('Weitere Tools');
+    trackClick('Weitere Tools');
   };
 
   return (
