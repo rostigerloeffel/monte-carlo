@@ -18,7 +18,7 @@ const InputSection: React.FC<InputSectionProps> = ({
   remainingValue
 }) => {
   return (
-    <div style={{ width: 350, margin: '2rem 0' }}>
+    <div style={{ width: 350, margin: '1rem 0' }}>
       <label htmlFor="number-list" style={{ fontWeight: 500, marginBottom: 8, display: 'block' }}>
         Bisher erledigte Story Points pro Sprint:
       </label>
@@ -30,7 +30,7 @@ const InputSection: React.FC<InputSectionProps> = ({
         placeholder="z.B. 12, 15 18, 20"
         style={{ width: '100%', padding: 8, fontSize: 16, marginBottom: 12 }}
       />
-      <div style={{ marginTop: 12 }}>
+      <div style={{ marginTop: 8 }}>
         <strong>Erkannte Werte:</strong>
         <span style={{ marginLeft: 8 }}>
           {values.length === 0
@@ -39,7 +39,7 @@ const InputSection: React.FC<InputSectionProps> = ({
           }
         </span>
       </div>
-      <div style={{ marginTop: 32 }}>
+      <div style={{ marginTop: 16 }}>
         <label htmlFor="remaining-work" style={{ fontWeight: 500, marginBottom: 8, display: 'block' }}>
           Offene Story Points:
         </label>

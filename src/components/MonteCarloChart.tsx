@@ -17,7 +17,7 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
   }
 
   return (
-    <div style={{ marginTop: 32 }}>
+    <div style={{ marginTop: 16 }}>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: 32 }}>
         <div style={{ flex: 1 }}>
           <strong>Monte-Carlo-Prognose (Histogramm):</strong>
@@ -36,7 +36,7 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
           </ResponsiveContainer>
         </div>
       </div>
-      <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
+      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
         <label htmlFor="iterations-input" style={{ fontWeight: 500 }}>Anzahl Iterationen:</label>
         <input
           id="iterations-input"

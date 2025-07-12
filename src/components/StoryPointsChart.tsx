@@ -14,7 +14,7 @@ const StoryPointsChart: React.FC<StoryPointsChartProps> = ({ values }) => {
   }
 
   return (
-    <div style={{ flex: 1, minWidth: 300, maxWidth: 500, margin: '2rem 0' }}>
+    <div style={{ flex: 1, minWidth: 300, maxWidth: 500, margin: '1rem 0' }}>
       <strong>Storypoints / Sprint:</strong>
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={chartData} margin={{ top: 20, right: 40, left: 80, bottom: 60 }}>
