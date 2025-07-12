@@ -36,6 +36,31 @@ const IntegrationSection: React.FC = () => {
     console.log('Basecamp integration clicked');
   };
 
+  const handleRedmineClick = () => {
+    // TODO: Implement Redmine integration
+    console.log('Redmine integration clicked');
+  };
+
+  const handleGitHubClick = () => {
+    // TODO: Implement GitHub integration
+    console.log('GitHub integration clicked');
+  };
+
+  const handleGitLabClick = () => {
+    // TODO: Implement GitLab integration
+    console.log('GitLab integration clicked');
+  };
+
+  const handleClickUpClick = () => {
+    // TODO: Implement ClickUp integration
+    console.log('ClickUp integration clicked');
+  };
+
+  const handleMoreClick = () => {
+    // TODO: Show more integration options
+    console.log('More integrations clicked');
+  };
+
   return (
     <div style={{ width: '100%', maxWidth: 900, marginTop: 24 }}>
       <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>Integration</h2>
@@ -299,6 +324,191 @@ const IntegrationSection: React.FC = () => {
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
           </svg>
           <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Basecamp</span>
+        </button>
+        
+        <button
+          onClick={handleRedmineClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#B02B2C',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(176, 43, 44, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#A01A1B';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(176, 43, 44, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#B02B2C';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(176, 43, 44, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Redmine</span>
+        </button>
+        
+        <button
+          onClick={handleGitHubClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#24292E',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(36, 41, 46, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#1A1E22';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(36, 41, 46, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#24292E';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(36, 41, 46, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>GitHub</span>
+        </button>
+        
+        <button
+          onClick={handleGitLabClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#FC6D26',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(252, 109, 38, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#E55A1B';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(252, 109, 38, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#FC6D26';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(252, 109, 38, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>GitLab</span>
+        </button>
+        
+        <button
+          onClick={handleClickUpClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#7B68EE',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(123, 104, 238, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#6A5ACD';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(123, 104, 238, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#7B68EE';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(123, 104, 238, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>ClickUp</span>
+        </button>
+        
+        <button
+          onClick={handleMoreClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#6C757D',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(108, 117, 125, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#5A6268';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 117, 125, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#6C757D';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(108, 117, 125, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Mehr...</span>
         </button>
       </div>
       <div style={{ marginTop: 16, fontSize: 14, color: '#666', lineHeight: 1.5 }}>
