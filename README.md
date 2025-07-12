@@ -1,13 +1,36 @@
-# Monte Carlo Simulation
+# Monte Carlo Simulation - Story Points Prognose Tool
 
-A React + TypeScript + Vite application for Monte Carlo simulations.
+Ein kostenloses, interaktives Tool für Monte Carlo Simulationen zur Story Points Prognose in agilen Projekten. Verbessere deine Projektplanung mit statistischen Analysen und Integration mit beliebten Projektmanagement-Tools.
 
-## Features
+## 🎯 Features
 
-- Interactive Monte Carlo simulations
-- Modern React with TypeScript
-- Built with Vite for fast development
-- Responsive design
+- **Monte Carlo Simulationen** für präzise Story Points Prognosen
+- **Statistische Analysen** mit Visualisierungen und Prozentilen
+- **Integration mit Projektmanagement-Tools** wie Jira, Trello, Monday, Asana, YouTrack, Linear, Basecamp, Redmine, GitHub, GitLab, ClickUp und mehr
+- **Responsive Design** für Desktop und Mobile
+- **Moderne React/TypeScript** Architektur
+- **Kostenlos und Open Source**
+
+## 🚀 Live Demo
+
+**Besuche die Live-Version:** [https://rostigerloeffel.github.io/monte-carlo/](https://rostigerloeffel.github.io/monte-carlo/)
+
+## 📊 Was ist Monte Carlo Simulation?
+
+Monte Carlo Simulationen sind eine statistische Methode zur Risikoanalyse und Prognose. In der agilen Projektplanung helfen sie dabei:
+
+- **Realistische Zeitprognosen** basierend auf historischen Daten
+- **Risikoabschätzung** für Projektabschlüsse
+- **Vertrauensintervalle** für Story Points Schätzungen
+- **Verbesserte Planungsgenauigkeit** durch statistische Analysen
+
+## 🛠️ Technologien
+
+- **React 18** mit TypeScript
+- **Vite** für schnelle Entwicklung
+- **Moderne CSS** mit Flexbox und Grid
+- **Responsive Design** für alle Geräte
+- **GitHub Pages** für kostenloses Hosting
 
 ## Getting Started
 
@@ -50,6 +73,28 @@ npm run dev
 - Vite
 - ESLint
 
-## License
+## 🔍 SEO & Suchmaschinenoptimierung
+
+Diese Anwendung ist für optimale Auffindbarkeit in Suchmaschinen konfiguriert:
+
+- **Meta Tags** für bessere Google-Indexierung
+- **Open Graph** Tags für Social Media Sharing
+- **Structured Data** (JSON-LD) für Rich Snippets
+- **Sitemap.xml** für Suchmaschinen-Crawler
+- **Robots.txt** für optimale Crawling-Anweisungen
+- **Deutsche Lokalisierung** für bessere lokale Suchergebnisse
+
+## 📈 Performance
+
+- **Schnelle Ladezeiten** durch Vite Build-Optimierung
+- **Responsive Design** für alle Geräte
+- **Progressive Web App** Features
+- **Optimierte Bilder** und Assets
+
+## 🤝 Beitragen
+
+Verbesserungsvorschläge und Pull Requests sind willkommen! 
+
+## 📄 License
 
 MIT

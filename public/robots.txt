@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rostigerloeffel.github.io/monte-carlo/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1 
