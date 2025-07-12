@@ -28,10 +28,22 @@ const Home: React.FC = () => {
   }, [monteCarloHistogram]);
 
   return (
-    <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
+    <main className="container" style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      minHeight: '100vh',
+      width: '100%',
+      maxWidth: '100vw',
+      overflowX: 'hidden'
+    }}>
       <h1>{t('monte-carlo.title')}</h1>
       
-      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', gap: 32, width: '100%', maxWidth: 900 }}>
+      <div className="flex-responsive" style={{ 
+        width: '100%', 
+        maxWidth: '900px'
+      }}>
         <InputSection
           input={input}
           setInput={setInput}
@@ -46,8 +58,8 @@ const Home: React.FC = () => {
       <StatisticsSection values={values} remainingValue={remainingValue} />
       
       {monteCarloHistogram.length > 0 && (
-        <div style={{ width: '100%', maxWidth: 900 }}>
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: 32 }}>
+        <div style={{ width: '100%', maxWidth: '900px' }}>
+          <div className="flex-responsive">
             <MonteCarloChart
               monteCarloHistogram={monteCarloHistogram}
               iterationsInput={iterationsInput}

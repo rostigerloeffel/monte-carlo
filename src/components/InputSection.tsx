@@ -21,7 +21,13 @@ const InputSection: React.FC<InputSectionProps> = ({
   const { t } = useLanguage();
 
   return (
-    <div style={{ width: 350, margin: '1rem 0' }}>
+    <div style={{ 
+      width: '100%', 
+      maxWidth: '350px', 
+      minWidth: '280px',
+      margin: '1rem 0',
+      padding: '0 0.5rem'
+    }}>
       <label htmlFor="number-list" style={{ fontWeight: 500, marginBottom: 8, display: 'block' }}>
         {t('input.story-points.label')}
       </label>
@@ -31,7 +37,13 @@ const InputSection: React.FC<InputSectionProps> = ({
         value={input}
         onChange={e => setInput(e.target.value)}
         placeholder={t('input.story-points.placeholder')}
-        style={{ width: '100%', padding: 8, fontSize: 16, marginBottom: 12 }}
+        style={{ 
+          width: '100%', 
+          padding: 8, 
+          fontSize: 16, 
+          marginBottom: 12,
+          boxSizing: 'border-box'
+        }}
       />
       <div style={{ marginTop: 8 }}>
         <strong>{t('input.story-points.detected')}</strong>
@@ -52,7 +64,13 @@ const InputSection: React.FC<InputSectionProps> = ({
           value={remaining}
           onChange={e => setRemaining(e.target.value)}
           placeholder={t('input.remaining.placeholder')}
-          style={{ width: '100%', padding: 8, fontSize: 16, marginBottom: 8 }}
+          style={{ 
+            width: '100%', 
+            padding: 8, 
+            fontSize: 16, 
+            marginBottom: 8,
+            boxSizing: 'border-box'
+          }}
         />
         <div style={{ marginTop: 8 }}>
           <strong>{t('input.remaining.value')}</strong>

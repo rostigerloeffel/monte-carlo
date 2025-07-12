@@ -18,7 +18,16 @@ const PercentilesDisplay: React.FC<PercentilesDisplayProps> = ({ percentiles }) 
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', minWidth: 180, marginTop: 6 }}>
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'flex-start', 
+      minWidth: '180px',
+      maxWidth: '300px',
+      width: '100%',
+      marginTop: 6,
+      padding: '0 0.5rem'
+    }}>
       <strong style={{ marginBottom: 12 }}>{t('percentiles.title')}</strong>
       <div style={{ fontSize: 15, lineHeight: 1.6 }}>
         <div>{t('percentiles.p95')} <strong>{percentiles.p95}</strong> {t('percentiles.sprints')}</div>

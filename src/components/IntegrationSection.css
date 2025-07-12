@@ -1,0 +1,85 @@
+.integration-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  min-width: 100px;
+  justify-content: center;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.integration-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.integration-button svg {
+  flex-shrink: 0;
+}
+
+.integration-button span {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .integration-button {
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: 90px;
+  }
+  
+  .integration-button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .integration-button {
+    padding: 10px 14px;
+    font-size: 13px;
+    min-width: 80px;
+  }
+  
+  .integration-button svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.integration-message {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .integration-message {
+  background-color: #2d3748;
+  color: #a0aec0;
+  border-color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .integration-message {
+    margin: 12px 8px 0 8px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+} 

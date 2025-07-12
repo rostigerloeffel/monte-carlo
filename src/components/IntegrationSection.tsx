@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Counter } from 'counterapi';
 import { useLanguage } from '../context/LanguageContext';
+import './IntegrationSection.css';
 
 const counter = new Counter({ workspace: 'monte-carlo' });
 
@@ -70,38 +71,34 @@ const IntegrationSection: React.FC = () => {
   };
 
   return (
-    <div style={{ width: '100%', maxWidth: 900, marginTop: 24 }}>
+    <div style={{ 
+      width: '100%', 
+      maxWidth: '900px', 
+      marginTop: 24,
+      padding: '0 1rem'
+    }}>
       <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>{t('integration.title')}</h2>
-      <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap' }}>
+      <div style={{ 
+        display: 'flex', 
+        gap: '1rem', 
+        alignItems: 'center', 
+        flexWrap: 'wrap',
+        justifyContent: 'center'
+      }}>
         <button
           onClick={handleJiraClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#0052CC',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(0, 82, 204, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(0, 82, 204, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#0047B3';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 82, 204, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#0052CC';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 82, 204, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 21 24" fill="currentColor" style={{ flexShrink: 0 }}>
