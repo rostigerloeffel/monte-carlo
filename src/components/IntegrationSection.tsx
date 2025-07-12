@@ -111,33 +111,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleTrelloClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#0079BF',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(0, 121, 191, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(0, 121, 191, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#0066A3';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 121, 191, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#0079BF';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 121, 191, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 63 95" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -148,33 +133,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleMondayClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#00CA72',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(0, 202, 114, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(0, 202, 114, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#00B363';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 202, 114, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#00CA72';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 202, 114, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -185,33 +155,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleAsanaClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#F06A6A',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(240, 106, 106, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(240, 106, 106, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#E55A5A';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(240, 106, 106, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#F06A6A';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(240, 106, 106, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -222,33 +177,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleYouTrackClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#FF6B35',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#E55A2B';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 107, 53, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#FF6B35';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 107, 53, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -259,33 +199,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleLinearClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#5E6AD2',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(94, 106, 210, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(94, 106, 210, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#4F5BC2';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(94, 106, 210, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#5E6AD2';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(94, 106, 210, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -296,33 +221,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleBasecampClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#1D2D35',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(29, 45, 53, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(29, 45, 53, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#0F1D25';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(29, 45, 53, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#1D2D35';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(29, 45, 53, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -333,33 +243,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleRedmineClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#B02B2C',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(176, 43, 44, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(176, 43, 44, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#A01A1B';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(176, 43, 44, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#B02B2C';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(176, 43, 44, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -370,33 +265,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleGitHubClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#24292E',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(36, 41, 46, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(36, 41, 46, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#1A1E22';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(36, 41, 46, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#24292E';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(36, 41, 46, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -407,33 +287,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleGitLabClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#FC6D26',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(252, 109, 38, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(252, 109, 38, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#E55A1B';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(252, 109, 38, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#FC6D26';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(252, 109, 38, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -444,33 +309,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleClickUpClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#7B68EE',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(123, 104, 238, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(123, 104, 238, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#6A5ACD';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(123, 104, 238, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#7B68EE';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(123, 104, 238, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
@@ -481,33 +331,18 @@ const IntegrationSection: React.FC = () => {
         
         <button
           onClick={handleMoreClick}
+          className="integration-button"
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 10,
-            padding: '14px 20px',
             backgroundColor: '#6C757D',
-            color: 'white',
-            border: 'none',
-            borderRadius: 8,
-            cursor: 'pointer',
-            fontSize: 15,
-            fontWeight: 600,
-            boxShadow: '0 2px 8px rgba(108, 117, 125, 0.3)',
-            transition: 'all 0.2s ease',
-            minWidth: '120px',
-            justifyContent: 'center',
-            lineHeight: 1
+            boxShadow: '0 2px 8px rgba(108, 117, 125, 0.3)'
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.backgroundColor = '#5A6268';
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(108, 117, 125, 0.4)';
-            e.currentTarget.style.transform = 'translateY(-2px)';
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.backgroundColor = '#6C757D';
             e.currentTarget.style.boxShadow = '0 2px 8px rgba(108, 117, 125, 0.3)';
-            e.currentTarget.style.transform = 'translateY(0)';
           }}
         >
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
