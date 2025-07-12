@@ -65,6 +65,7 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
           step={100}
           value={iterationsInput}
           onChange={e => setIterationsInput(e.target.value)}
+          title={t('chart.monte-carlo.iterations.tooltip')}
           style={{ 
             width: 120, 
             padding: 6, 

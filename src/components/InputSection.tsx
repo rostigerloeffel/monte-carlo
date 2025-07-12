@@ -37,6 +37,7 @@ const InputSection: React.FC<InputSectionProps> = ({
         value={input}
         onChange={e => setInput(e.target.value)}
         placeholder={t('input.story-points.placeholder')}
+        title={t('input.story-points.tooltip')}
         style={{ 
           width: '100%', 
           padding: 8, 
@@ -64,6 +65,7 @@ const InputSection: React.FC<InputSectionProps> = ({
           value={remaining}
           onChange={e => setRemaining(e.target.value)}
           placeholder={t('input.remaining.placeholder')}
+          title={t('input.remaining.tooltip')}
           style={{ 
             width: '100%', 
             padding: 8, 
