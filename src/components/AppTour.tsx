@@ -44,6 +44,22 @@ const AppTour: React.FC<AppTourProps> = ({ isVisible, onClose, onInputChange }) 
     }
   }, [isVisible]);
 
+  // Zusätzlicher Effect für die IntegrationSection
+  useEffect(() => {
+    if (isTourOpen) {
+      // Verzögerung für die IntegrationSection, falls sie später gerendert wird
+      const timer = setTimeout(() => {
+        const integrationSection = document.querySelector('div.integration-section');
+        if (integrationSection) {
+          // Stelle sicher, dass die IntegrationSection sichtbar ist
+          integrationSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 1000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [isTourOpen]);
+
   const steps = useMemo(() => [
     {
       selector: '#number-list',
@@ -76,8 +92,9 @@ const AppTour: React.FC<AppTourProps> = ({ isVisible, onClose, onInputChange }) 
       content: t('tour.step7'),
     },
     {
-      selector: '.integration-section',
+      selector: 'div.integration-section',
       content: t('tour.step8'),
+      position: 'top' as const,
     },
   ], [t, onInputChange]);
 
@@ -140,6 +157,23 @@ const AppTour: React.FC<AppTourProps> = ({ isVisible, onClose, onInputChange }) 
         disableDotsNavigation={false}
         disableKeyboardNavigation={false}
         closeWithMask={true}
+        lastStepNextButton={
+          <button 
+            onClick={handleClose}
+            style={{
+              backgroundColor: '#0052CC',
+              color: 'white',
+              border: 'none',
+              padding: '8px 16px',
+              borderRadius: '4px',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: '500'
+            }}
+          >
+            Tour beenden
+          </button>
+        }
       />
     </>
   );

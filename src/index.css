@@ -288,3 +288,59 @@ input {
   background-color: #1a1a1a !important;
   color: rgba(255, 255, 255, 0.87) !important;
 }
+
+/* Stepper (Dots) und Navigation Theme-Styles */
+[data-theme="light"] .reactour__dot {
+  background: #e1e5e9 !important;
+  border: 2px solid #0052CC !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 4px !important;
+  opacity: 1 !important;
+  transition: background 0.2s, border 0.2s;
+}
+[data-theme="dark"] .reactour__dot {
+  background: #404040 !important;
+  border: 2px solid #0052CC !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 4px !important;
+  opacity: 1 !important;
+  transition: background 0.2s, border 0.2s;
+}
+[data-theme="light"] .reactour__dot--is-active {
+  background: #0052CC !important;
+  border: 2px solid #0052CC !important;
+  box-shadow: 0 0 0 2px #b3d4fc !important;
+}
+[data-theme="dark"] .reactour__dot--is-active {
+  background: #0052CC !important;
+  border: 2px solid #0052CC !important;
+  box-shadow: 0 0 0 2px #1a1a1a !important;
+}
+[data-theme="light"] .reactour__navigation {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 16px 0 0 0 !important;
+}
+[data-theme="dark"] .reactour__navigation {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 16px 0 0 0 !important;
+}
+[data-theme="light"] .reactour__badge {
+  background: #0052CC !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 8px rgba(0,82,204,0.15) !important;
+}
+[data-theme="dark"] .reactour__badge {
+  background: #0052CC !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border-radius: 50% !important;
+  box-shadow: 0 2px 8px rgba(0,82,204,0.25) !important;
+}
