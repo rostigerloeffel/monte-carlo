@@ -3,7 +3,7 @@
   align-items: center;
   gap: 10px;
   padding: 14px 20px;
-  color: white;
+  color: white !important;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -20,6 +20,7 @@
 .integration-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: white !important;
 }
 
 .integration-button svg {
@@ -29,6 +30,7 @@
 .integration-button span {
   display: inline-block;
   vertical-align: baseline;
+  color: white !important;
 }
 
 /* Responsive adjustments */
