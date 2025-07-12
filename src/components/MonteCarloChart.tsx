@@ -31,7 +31,7 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
         <div style={{ flex: 1, width: '100%' }}>
           <strong>{t('chart.monte-carlo.title')}</strong>
           <ResponsiveContainer width="100%" height={260}>
-            <BarChart data={monteCarloHistogram} margin={{ top: 20, right: 20, left: 40, bottom: 10 }}>
+            <BarChart data={monteCarloHistogram} margin={{ top: 20, right: 20, left: 40, bottom: 30 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="acc" interval={0} tick={{ fontSize: 12 }}>
                 <Label value={t('chart.monte-carlo.x-axis')} position="bottom" offset={10} style={{ fontSize: 14 }} />
