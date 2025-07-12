@@ -6,8 +6,10 @@ import MonteCarloChart from "./components/MonteCarloChart";
 import PercentilesDisplay from "./components/PercentilesDisplay";
 import IntegrationSection from "./components/IntegrationSection";
 import { parseNumbers, calculateMonteCarloHistogram, calculatePercentiles } from "./utils/monteCarlo";
+import { useLanguage } from "./context/LanguageContext";
 
 const Home: React.FC = () => {
+  const { t } = useLanguage();
   const [input, setInput] = useState("");
   const values = parseNumbers(input);
   const [remaining, setRemaining] = useState("");
@@ -27,7 +29,7 @@ const Home: React.FC = () => {
 
   return (
     <main style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-      <h1>Monte Carlo Prognose</h1>
+      <h1>{t('monte-carlo.title')}</h1>
       
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'flex-start', gap: 32, width: '100%', maxWidth: 900 }}>
         <InputSection

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Counter } from 'counterapi';
+import { useLanguage } from '../context/LanguageContext';
 
 const counter = new Counter({ workspace: 'monte-carlo' });
 
 const IntegrationSection: React.FC = () => {
   const [selectedIntegration, setSelectedIntegration] = useState<string | null>(null);
+  const { t } = useLanguage();
   
 
   const handleJiraClick = () => {
@@ -69,7 +71,7 @@ const IntegrationSection: React.FC = () => {
 
   return (
     <div style={{ width: '100%', maxWidth: 900, marginTop: 24 }}>
-      <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>Integration</h2>
+      <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>{t('integration.title')}</h2>
       <div style={{ display: 'flex', gap: 20, alignItems: 'center', flexWrap: 'wrap' }}>
         <button
           onClick={handleJiraClick}
@@ -535,18 +537,18 @@ const IntegrationSection: React.FC = () => {
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#0052CC"/>
             </svg>
             <span style={{ fontWeight: 500, color: '#2D3748', fontSize: 13 }}>
-              {selectedIntegration} Integration
+              {selectedIntegration} {t('integration.status.integration')}
             </span>
           </div>
           <p style={{ margin: 0, color: '#718096', fontSize: 12 }}>
-            Wir arbeiten derzeit an der Integration mit {selectedIntegration}. Diese Funktion wird in Kürze verfügbar sein.
+            {t('integration.status.working').replace('{tool}', selectedIntegration || '')}
           </p>
         </div>
       )}
       
       <div style={{ marginTop: 16, fontSize: 14, color: '#666', lineHeight: 1.5 }}>
         <p style={{ margin: 0 }}>
-          <strong>Verbinde deine Monte Carlo Prognose</strong> mit deinen Projektmanagement-Tools für eine nahtlose Arbeitsablauf-Integration.
+          <strong>{t('integration.description')}</strong>
         </p>
       </div>
     </div>
