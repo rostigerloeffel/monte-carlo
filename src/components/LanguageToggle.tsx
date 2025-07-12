@@ -46,10 +46,10 @@ const LanguageToggle: React.FC = () => {
         return (
           <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#012169"/>
-            <path d="M0 0L20 15M20 0L0 15" stroke="#FFF" strokeWidth="1"/>
-            <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="0.5"/>
-            <path d="M10 0V15M0 7.5H20" stroke="#FFF" strokeWidth="1"/>
-            <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="0.5"/>
+            <path d="M0 0L20 15M20 0L0 15" stroke="#FFF" strokeWidth="1.5"/>
+            <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="0.8"/>
+            <path d="M10 0V15M0 7.5H20" stroke="#FFF" strokeWidth="2"/>
+            <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="1"/>
           </svg>
         );
       case 'hi':
@@ -64,9 +64,9 @@ const LanguageToggle: React.FC = () => {
       case 'de':
         return (
           <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
-            <rect width="20" height="5" fill="#FFCE00"/>
-            <rect y="5" width="20" height="5" fill="#D00"/>
-            <rect y="10" width="20" height="5" fill="#000"/>
+            <rect width="20" height="5" fill="#000000"/>
+            <rect y="5" width="20" height="5" fill="#DD0000"/>
+            <rect y="10" width="20" height="5" fill="#FFCE00"/>
           </svg>
         );
       case 'fr':
