@@ -4,6 +4,7 @@ import StoryPointsChart from "./components/StoryPointsChart";
 import StatisticsSection from "./components/StatisticsSection";
 import MonteCarloChart from "./components/MonteCarloChart";
 import PercentilesDisplay from "./components/PercentilesDisplay";
+import IntegrationSection from "./components/IntegrationSection";
 import { parseNumbers, calculateMonteCarloHistogram, calculatePercentiles } from "./utils/monteCarlo";
 
 const Home: React.FC = () => {
@@ -54,6 +55,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       )}
+      
+      <IntegrationSection />
     </main>
   );
 };
