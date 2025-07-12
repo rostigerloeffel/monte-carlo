@@ -39,7 +39,7 @@ const en = {
   'percentiles.p50': '50%:',
   'percentiles.sprints': 'Sprints',
   'chart.monte-carlo.title': 'Monte Carlo Forecast (Histogram):',
-  'chart.monte-carlo.x-axis': 'Accumulated',
+  'chart.monte-carlo.x-axis': 'Accumulated Sprints',
   'chart.monte-carlo.y-axis': 'Frequency',
   'chart.monte-carlo.iterations.label': 'Number of iterations:',
   'chart.monte-carlo.iterations.tooltip': 'Determine the number of Monte Carlo simulations. More iterations lead to more precise results but require more computation time.',
