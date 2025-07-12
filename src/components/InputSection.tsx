@@ -99,15 +99,6 @@ const InputSection: React.FC<InputSectionProps> = ({
             boxSizing: 'border-box'
           }}
         />
-        <div style={{ marginTop: 8 }}>
-          <strong>{t('input.remaining.value')}</strong>
-          <span style={{ marginLeft: 8 }}>
-            {remaining === "" || isNaN(remainingValue)
-              ? <span style={{ color: '#888' }}>{t('input.remaining.none')}</span>
-              : remainingValue
-            }
-          </span>
-        </div>
       </div>
     </div>
   );
