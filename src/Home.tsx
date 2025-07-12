@@ -8,11 +8,30 @@ import IntegrationSection from "./components/IntegrationSection";
 import { parseNumbers, calculateMonteCarloHistogram, calculatePercentiles } from "./utils/monteCarlo";
 import { useLanguage } from "./context/LanguageContext";
 
-const Home: React.FC = () => {
+interface HomeProps {
+  input?: string;
+  setInput?: (value: string) => void;
+  remaining?: string;
+  setRemaining?: (value: string) => void;
+}
+
+const Home: React.FC<HomeProps> = ({ 
+  input: externalInput, 
+  setInput: externalSetInput, 
+  remaining: externalRemaining, 
+  setRemaining: externalSetRemaining 
+}) => {
   const { t } = useLanguage();
-  const [input, setInput] = useState("");
+  const [internalInput, setInternalInput] = useState("");
+  const [internalRemaining, setInternalRemaining] = useState("");
+  
+  // Verwende externe oder interne State
+  const input = externalInput !== undefined ? externalInput : internalInput;
+  const setInput = externalSetInput || setInternalInput;
+  const remaining = externalRemaining !== undefined ? externalRemaining : internalRemaining;
+  const setRemaining = externalSetRemaining || setInternalRemaining;
+  
   const values = parseNumbers(input);
-  const [remaining, setRemaining] = useState("");
   const remainingValue = Number(remaining);
   const iterations = 10000; // Fixed value
 
@@ -53,7 +72,9 @@ const Home: React.FC = () => {
         <StoryPointsChart values={values} />
       </div>
       
-      <StatisticsSection values={values} remainingValue={remainingValue} />
+      <div style={{ marginBottom: '2rem' }}>
+        <StatisticsSection values={values} remainingValue={remainingValue} />
+      </div>
       
       {monteCarloHistogram.length > 0 && (
         <div style={{ width: '100%', maxWidth: '900px' }}>

@@ -24,7 +24,7 @@ const InputSection: React.FC<InputSectionProps> = ({
   const max = values.length > 0 ? Math.max(...values) : 0;
 
   return (
-    <div style={{ 
+    <div id="input-section" style={{ 
       width: '100%', 
       maxWidth: '350px', 
       minWidth: '280px',

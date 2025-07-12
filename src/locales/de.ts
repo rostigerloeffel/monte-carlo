@@ -49,7 +49,21 @@ const de = {
   'chart.story-points.y-axis': 'Story Points',
   'monte-carlo.title': 'Monte Carlo Simulation',
   'monte-carlo.subtitle': 'Story Points Prognose Tool',
-  'monte-carlo.description': 'Ein kostenloses, interaktives Tool für Monte Carlo Simulationen zur Story Points Prognose in agilen Projekten.'
+  'monte-carlo.description': 'Ein kostenloses, interaktives Tool für Monte Carlo Simulationen zur Story Points Prognose in agilen Projekten.',
+  'tour.start': 'Tour starten',
+  'tour.back': 'Zurück',
+  'tour.next': 'Weiter',
+  'tour.finish': 'Beenden',
+  'tour.skip': 'Überspringen',
+  'tour.close': 'Schließen',
+  'tour.step1': 'Gib hier deine abgeschlossenen Story Points aus vergangenen Sprints ein. Zahlen können durch Kommas, Leerzeichen oder Zeilenumbrüche getrennt werden.',
+  'tour.step2': 'Gib hier die Gesamtanzahl der verbleibenden Story Points ein, die noch abgeschlossen werden müssen.',
+  'tour.step3': 'Hier siehst du die grundlegenden Prognosen basierend auf deinen historischen Daten.',
+  'tour.step4': 'Durchschnittsfall: Die wahrscheinlichste Anzahl von Sprints basierend auf dem Durchschnitt deiner historischen Daten.',
+  'tour.step5': 'Bester Fall: Die optimistischste Schätzung basierend auf deinem besten Sprint.',
+  'tour.step6': 'Schlimmster Fall: Die pessimistischste Schätzung basierend auf deinem schlechtesten Sprint.',
+  'tour.step7': 'Perzentile zeigen dir, mit welcher Wahrscheinlichkeit du dein Ziel in einer bestimmten Anzahl von Sprints erreichen wirst. 50% bedeutet, dass du in 50% der Fälle dein Ziel in dieser Anzahl von Sprints oder weniger erreichen wirst.',
+  'tour.step8': 'Hier kannst du deine Prognose mit verschiedenen Projektmanagement-Tools integrieren. Die Integrationen werden bald verfügbar sein.'
 };
 
 export default de; 

@@ -26,7 +26,7 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({ values, remaining
   const mean = values.reduce((a, b) => a + b, 0) / values.length;
 
   return (
-    <div style={{ 
+    <div className="statistics-section" style={{ 
       width: '100%', 
       maxWidth: '900px', 
       marginTop: 16,
@@ -44,9 +44,9 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({ values, remaining
           gap: '24px 40px',
           justifyContent: 'center'
         }}>
-          <li>{t('statistics.avg-case')} <strong>{Math.round(remainingValue / mean)}</strong></li>
-          <li>{t('statistics.best-case')} <strong>{Math.round(remainingValue / Math.max(...values))}</strong></li>
-          <li>{t('statistics.worst-case')} <strong>{Math.round(remainingValue / Math.min(...values))}</strong></li>
+          <li className="avg-case">{t('statistics.avg-case')} <strong>{Math.round(remainingValue / mean)}</strong></li>
+          <li className="best-case">{t('statistics.best-case')} <strong>{Math.round(remainingValue / Math.max(...values))}</strong></li>
+          <li className="worst-case">{t('statistics.worst-case')} <strong>{Math.round(remainingValue / Math.min(...values))}</strong></li>
         </ul>
       ) : (
         <div style={{ color: '#888', fontSize: 16 }}>{t('statistics.no-remaining')}</div>

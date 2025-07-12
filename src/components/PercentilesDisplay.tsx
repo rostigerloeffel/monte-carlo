@@ -18,7 +18,7 @@ const PercentilesDisplay: React.FC<PercentilesDisplayProps> = ({ percentiles }) 
   }
 
   return (
-    <div style={{ 
+    <div className="percentiles-section" style={{ 
       display: 'flex', 
       flexDirection: 'column', 
       alignItems: 'center', 

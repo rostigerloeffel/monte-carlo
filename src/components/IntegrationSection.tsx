@@ -71,7 +71,7 @@ const IntegrationSection: React.FC = () => {
   };
 
   return (
-    <div style={{ 
+    <div className="integration-section" style={{ 
       width: '100%', 
       maxWidth: '900px', 
       marginTop: 24,

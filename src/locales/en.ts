@@ -49,7 +49,21 @@ const en = {
   'chart.story-points.y-axis': 'Story Points',
   'monte-carlo.title': 'Monte Carlo Simulation',
   'monte-carlo.subtitle': 'Story Points Forecast Tool',
-  'monte-carlo.description': 'A free, interactive tool for Monte Carlo simulations for story points forecasting in agile projects.'
+  'monte-carlo.description': 'A free, interactive tool for Monte Carlo simulations for story points forecasting in agile projects.',
+  'tour.start': 'Start tour',
+  'tour.back': 'Back',
+  'tour.next': 'Next',
+  'tour.finish': 'Finish',
+  'tour.skip': 'Skip',
+  'tour.close': 'Close',
+  'tour.step1': 'Enter your completed story points from past sprints here. Numbers can be separated by commas, spaces, or line breaks.',
+  'tour.step2': 'Enter the total number of remaining story points that still need to be completed here.',
+  'tour.step3': 'Here you can see the basic forecasts based on your historical data.',
+  'tour.step4': 'Average case: The most likely number of sprints based on the average of your historical data.',
+  'tour.step5': 'Best case: The most optimistic estimate based on your best sprint.',
+  'tour.step6': 'Worst case: The most pessimistic estimate based on your worst sprint.',
+  'tour.step7': 'Percentiles show you the probability of reaching your goal in a certain number of sprints. 50% means that in 50% of cases you will reach your goal in this number of sprints or less.',
+  'tour.step8': 'Here you can integrate your forecast with various project management tools. The integrations will be available soon.'
 };
 
 export default en; 
