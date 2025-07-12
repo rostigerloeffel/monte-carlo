@@ -22,174 +22,174 @@ const LanguageToggle: React.FC = () => {
     switch (lang) {
       case 'zh':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#DE2910"/>
-            <polygon points="0,0 8,6 0,12" fill="#FFDE00"/>
-            <polygon points="8,0 16,6 8,12" fill="#FFDE00"/>
-            <circle cx="8" cy="6" r="1" fill="#DE2910"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#DE2910"/>
+            <polygon points="0,0 10,7.5 0,15" fill="#FFDE00"/>
+            <polygon points="10,0 20,7.5 10,15" fill="#FFDE00"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#DE2910"/>
           </svg>
         );
       case 'es':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="6" fill="#FFD100"/>
-            <rect y="6" width="16" height="6" fill="#FF0000"/>
-            <rect width="16" height="4" fill="#FFD100"/>
-            <rect y="8" width="16" height="4" fill="#FF0000"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FFD100"/>
+            <rect y="5" width="20" height="5" fill="#FF0000"/>
+            <rect width="20" height="5" fill="#FFD100"/>
+            <rect y="10" width="20" height="5" fill="#FF0000"/>
           </svg>
         );
       case 'en':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#012169"/>
-            <path d="M0 0L16 12M16 0L0 12" stroke="#FFF" strokeWidth="1"/>
-            <path d="M0 0L16 12M16 0L0 12" stroke="#C8102E" strokeWidth="0.5"/>
-            <path d="M8 0V12M0 6H16" stroke="#FFF" strokeWidth="1"/>
-            <path d="M8 0V12M0 6H16" stroke="#C8102E" strokeWidth="0.5"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#012169"/>
+            <path d="M0 0L20 15M20 0L0 15" stroke="#FFF" strokeWidth="1"/>
+            <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="0.5"/>
+            <path d="M10 0V15M0 7.5H20" stroke="#FFF" strokeWidth="1"/>
+            <path d="M10 0V15M0 7.5H20" stroke="#C8102E" strokeWidth="0.5"/>
           </svg>
         );
       case 'hi':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FF9933"/>
-            <rect y="4" width="16" height="4" fill="#FFFFFF"/>
-            <rect y="8" width="16" height="4" fill="#138808"/>
-            <circle cx="8" cy="6" r="1" fill="#000080"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FF9933"/>
+            <rect y="5" width="20" height="5" fill="#FFFFFF"/>
+            <rect y="10" width="20" height="5" fill="#138808"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
           </svg>
         );
       case 'de':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FFCE00"/>
-            <rect y="4" width="16" height="4" fill="#D00"/>
-            <rect y="8" width="16" height="4" fill="#000"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FFCE00"/>
+            <rect y="5" width="20" height="5" fill="#D00"/>
+            <rect y="10" width="20" height="5" fill="#000"/>
           </svg>
         );
       case 'fr':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="5.33" height="12" fill="#002395"/>
-            <rect x="5.33" width="5.34" height="12" fill="#FFFFFF"/>
-            <rect x="10.67" width="5.33" height="12" fill="#ED2939"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="6.67" height="15" fill="#002395"/>
+            <rect x="6.67" width="6.66" height="15" fill="#FFFFFF"/>
+            <rect x="13.33" width="6.67" height="15" fill="#ED2939"/>
           </svg>
         );
       case 'ja':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#FFFFFF"/>
-            <circle cx="8" cy="6" r="3" fill="#BC002D"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#FFFFFF"/>
+            <circle cx="10" cy="7.5" r="4" fill="#BC002D"/>
           </svg>
         );
       case 'ko':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#FFFFFF"/>
-            <circle cx="8" cy="6" r="2" fill="#CD2E3A"/>
-            <path d="M8 2L9 4L11 4L9.5 5.5L10 7.5L8 6.5L6 7.5L6.5 5.5L5 4L7 4L8 2Z" fill="#0047A0"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#FFFFFF"/>
+            <circle cx="10" cy="7.5" r="3" fill="#CD2E3A"/>
+            <path d="M10 2.5L11.5 5L14 5L11.75 6.5L12.5 9L10 7.5L7.5 9L8.25 6.5L6 5L8.5 5L10 2.5Z" fill="#0047A0"/>
           </svg>
         );
       case 'it':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="5.33" height="12" fill="#009246"/>
-            <rect x="5.33" width="5.34" height="12" fill="#FFFFFF"/>
-            <rect x="10.67" width="5.33" height="12" fill="#CE2B37"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="6.67" height="15" fill="#009246"/>
+            <rect x="6.67" width="6.66" height="15" fill="#FFFFFF"/>
+            <rect x="13.33" width="6.67" height="15" fill="#CE2B37"/>
           </svg>
         );
       case 'ru':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FFFFFF"/>
-            <rect y="4" width="16" height="4" fill="#0039A6"/>
-            <rect y="8" width="16" height="4" fill="#D52B1E"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FFFFFF"/>
+            <rect y="5" width="20" height="5" fill="#0039A6"/>
+            <rect y="10" width="20" height="5" fill="#D52B1E"/>
           </svg>
         );
       case 'pt':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#006600"/>
-            <circle cx="8" cy="6" r="2" fill="#FFCC00"/>
-            <circle cx="8" cy="6" r="1.5" fill="#006600"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#006600"/>
+            <circle cx="10" cy="7.5" r="3" fill="#FFCC00"/>
+            <circle cx="10" cy="7.5" r="2" fill="#006600"/>
           </svg>
         );
       case 'tr':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#E30A17"/>
-            <circle cx="8" cy="6" r="2" fill="#FFFFFF"/>
-            <circle cx="8" cy="6" r="1.5" fill="#E30A17"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#E30A17"/>
+            <circle cx="10" cy="7.5" r="3" fill="#FFFFFF"/>
+            <circle cx="10" cy="7.5" r="2" fill="#E30A17"/>
           </svg>
         );
       case 'bn':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#006A4E"/>
-            <circle cx="8" cy="6" r="2" fill="#F42A41"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#006A4E"/>
+            <circle cx="10" cy="7.5" r="3" fill="#F42A41"/>
           </svg>
         );
       case 'pa':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="6" fill="#FF9933"/>
-            <rect y="6" width="16" height="6" fill="#138808"/>
-            <circle cx="8" cy="6" r="1" fill="#000080"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="7.5" fill="#FF9933"/>
+            <rect y="7.5" width="20" height="7.5" fill="#138808"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
           </svg>
         );
       case 'jv':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#FFFFFF"/>
-            <rect width="16" height="6" fill="#FF0000"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#FFFFFF"/>
+            <rect width="20" height="7.5" fill="#FF0000"/>
           </svg>
         );
       case 'te':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FF9933"/>
-            <rect y="4" width="16" height="4" fill="#FFFFFF"/>
-            <rect y="8" width="16" height="4" fill="#138808"/>
-            <circle cx="8" cy="6" r="1" fill="#000080"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FF9933"/>
+            <rect y="5" width="20" height="5" fill="#FFFFFF"/>
+            <rect y="10" width="20" height="5" fill="#138808"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
           </svg>
         );
       case 'mr':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FF9933"/>
-            <rect y="4" width="16" height="4" fill="#FFFFFF"/>
-            <rect y="8" width="16" height="4" fill="#138808"/>
-            <circle cx="8" cy="6" r="1" fill="#000080"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FF9933"/>
+            <rect y="5" width="20" height="5" fill="#FFFFFF"/>
+            <rect y="10" width="20" height="5" fill="#138808"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
           </svg>
         );
       case 'ta':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="4" fill="#FF9933"/>
-            <rect y="4" width="16" height="4" fill="#FFFFFF"/>
-            <rect y="8" width="16" height="4" fill="#138808"/>
-            <circle cx="8" cy="6" r="1" fill="#000080"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="5" fill="#FF9933"/>
+            <rect y="5" width="20" height="5" fill="#FFFFFF"/>
+            <rect y="10" width="20" height="5" fill="#138808"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
           </svg>
         );
       case 'vi':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#DA251D"/>
-            <polygon points="8,2 9.5,6 14,6 10.5,9 12,13 8,10 4,13 5.5,9 2,6 6.5,6" fill="#FFFF00"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#DA251D"/>
+            <polygon points="10,2.5 12.5,7.5 17.5,7.5 13.75,10.5 15,15 10,12.5 5,15 6.25,10.5 2.5,7.5 7.5,7.5" fill="#FFFF00"/>
           </svg>
         );
       case 'ur':
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#FFFFFF"/>
-            <rect width="16" height="4" fill="#01411C"/>
-            <rect y="8" width="16" height="4" fill="#01411C"/>
-            <circle cx="8" cy="6" r="1" fill="#FFFFFF"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#FFFFFF"/>
+            <rect width="20" height="5" fill="#01411C"/>
+            <rect y="10" width="20" height="5" fill="#01411C"/>
+            <circle cx="10" cy="7.5" r="1.5" fill="#FFFFFF"/>
           </svg>
         );
       default:
         return (
-          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-            <rect width="16" height="12" fill="#4A90E2"/>
-            <circle cx="8" cy="6" r="2" fill="#FFF"/>
+          <svg width="20" height="15" viewBox="0 0 20 15" fill="none">
+            <rect width="20" height="15" fill="#4A90E2"/>
+            <circle cx="10" cy="7.5" r="3" fill="#FFF"/>
           </svg>
         );
     }

@@ -24,20 +24,23 @@ const ThemeToggle: React.FC = () => {
     switch (currentTheme) {
       case 'light':
         return (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM8.166 17.834a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 10-1.06-1.061l-1.591 1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 8.166a.75.75 0 001.06-1.06L5.636 5.515a.75.75 0 00-1.061 1.06l1.59 1.591z" fill="currentColor"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         );
       case 'dark':
         return (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" fill="currentColor"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
           </svg>
         );
       case 'system':
         return (
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v12h16V4H4zm2 4h12v2H6V6zm0 4h8v2H6v-2z" fill="currentColor"/>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
+            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
           </svg>
         );
       default:
@@ -138,8 +141,9 @@ const ThemeToggle: React.FC = () => {
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM8.166 17.834a.75.75 0 001.06 1.06l1.591-1.59a.75.75 0 10-1.06-1.061l-1.591 1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 8.166a.75.75 0 001.06-1.06L5.636 5.515a.75.75 0 00-1.061 1.06l1.59 1.591z" fill="currentColor"/>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
           {t('theme.light')}
         </button>
@@ -157,8 +161,8 @@ const ThemeToggle: React.FC = () => {
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" fill="currentColor"/>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/>
           </svg>
           {t('theme.dark')}
         </button>
@@ -176,8 +180,10 @@ const ThemeToggle: React.FC = () => {
             e.currentTarget.style.backgroundColor = 'transparent';
           }}
         >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4 2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v12h16V4H4zm2 4h12v2H6V6zm0 4h8v2H6v-2z" fill="currentColor"/>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" fill="none" stroke="currentColor" strokeWidth="2"/>
+            <line x1="8" y1="21" x2="16" y2="21" stroke="currentColor" strokeWidth="2"/>
+            <line x1="12" y1="17" x2="12" y2="21" stroke="currentColor" strokeWidth="2"/>
           </svg>
           {t('theme.system')}
         </button>
