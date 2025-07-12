@@ -20,7 +20,7 @@ const en = {
   'input.remaining.tooltip': 'Enter the total number of remaining story points that still need to be completed.',
   'input.remaining.value': 'Value:',
   'input.remaining.none': 'No valid numbers detected',
-  'statistics.title': 'Forecast',
+  'statistics.title': 'Sprint Forecast',
   'statistics.basic': 'Basic Statistics',
   'statistics.no-values': 'No values available.',
   'statistics.no-remaining': 'No remaining story points entered.',

@@ -44,10 +44,9 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({ values, remaining
           gap: '24px 40px',
           justifyContent: 'center'
         }}>
-          <li>{t('statistics.sprints-needed')}</li>
-          <li>{t('statistics.avg-case')} <strong>{(remainingValue / mean).toFixed(1)}</strong></li>
-          <li>{t('statistics.best-case')} <strong>{(remainingValue / Math.max(...values)).toFixed(1)}</strong></li>
-          <li>{t('statistics.worst-case')} <strong>{(remainingValue / Math.min(...values)).toFixed(1)}</strong></li>
+          <li>{t('statistics.avg-case')} <strong>{Math.round(remainingValue / mean)}</strong></li>
+          <li>{t('statistics.best-case')} <strong>{Math.round(remainingValue / Math.max(...values))}</strong></li>
+          <li>{t('statistics.worst-case')} <strong>{Math.round(remainingValue / Math.min(...values))}</strong></li>
         </ul>
       ) : (
         <div style={{ color: '#888', fontSize: 16 }}>{t('statistics.no-remaining')}</div>
