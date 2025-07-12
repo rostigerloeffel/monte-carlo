@@ -20,6 +20,11 @@ const InputSection: React.FC<InputSectionProps> = ({
 }) => {
   const { t } = useLanguage();
 
+  // Calculate basic statistics
+  const mean = values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0;
+  const min = values.length > 0 ? Math.min(...values) : 0;
+  const max = values.length > 0 ? Math.max(...values) : 0;
+
   return (
     <div style={{ 
       width: '100%', 
@@ -55,6 +60,46 @@ const InputSection: React.FC<InputSectionProps> = ({
           }
         </span>
       </div>
+      
+      {/* Basic Statistics */}
+      {values.length > 0 && (
+        <div style={{ 
+          marginTop: 16, 
+          padding: '12px 16px', 
+          backgroundColor: '#f8f9fa', 
+          borderRadius: 8,
+          border: '1px solid #e9ecef'
+        }}>
+          <div style={{ 
+            fontSize: 14, 
+            fontWeight: 600, 
+            marginBottom: 8, 
+            color: '#495057' 
+          }}>
+            {t('statistics.basic')}
+          </div>
+          <div style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap', 
+            gap: '16px 24px',
+            fontSize: 13
+          }}>
+            <div>
+              {t('statistics.values-count')} <strong>{values.length}</strong>
+            </div>
+            <div>
+              {t('statistics.mean')} <strong>{mean.toFixed(2)}</strong>
+            </div>
+            <div>
+              {t('statistics.min')} <strong>{min}</strong>
+            </div>
+            <div>
+              {t('statistics.max')} <strong>{max}</strong>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div style={{ marginTop: 16 }}>
         <label htmlFor="remaining-work" style={{ fontWeight: 500, marginBottom: 8, display: 'block' }}>
           {t('input.remaining.label')}
