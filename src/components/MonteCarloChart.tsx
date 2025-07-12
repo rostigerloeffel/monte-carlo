@@ -4,14 +4,10 @@ import { useLanguage } from '../context/LanguageContext';
 
 interface MonteCarloChartProps {
   monteCarloHistogram: Array<{ acc: number; count: number }>;
-  iterationsInput: string;
-  setIterationsInput: (value: string) => void;
 }
 
 const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
-  monteCarloHistogram,
-  iterationsInput,
-  setIterationsInput
+  monteCarloHistogram
 }) => {
   const { t } = useLanguage();
 
@@ -48,34 +44,6 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
             </BarChart>
           </ResponsiveContainer>
         </div>
-      </div>
-      <div style={{ 
-        marginTop: 12, 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: 12,
-        flexWrap: 'wrap'
-      }}>
-        <label htmlFor="iterations-input" style={{ fontWeight: 500 }}>{t('chart.monte-carlo.iterations.label')}</label>
-        <input
-          id="iterations-input"
-          type="number"
-          min={100}
-          max={1000000}
-          step={100}
-          value={iterationsInput}
-          onChange={e => setIterationsInput(e.target.value)}
-          title={t('chart.monte-carlo.iterations.tooltip')}
-          style={{ 
-            width: 120, 
-            padding: 6, 
-            fontSize: 15,
-            boxSizing: 'border-box'
-          }}
-        />
-        <span style={{ fontSize: 12, color: '#888' }}>
-          {t('chart.monte-carlo.iterations.range')}
-        </span>
       </div>
     </div>
   );

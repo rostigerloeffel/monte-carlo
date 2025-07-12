@@ -14,8 +14,7 @@ const Home: React.FC = () => {
   const values = parseNumbers(input);
   const [remaining, setRemaining] = useState("");
   const remainingValue = Number(remaining);
-  const [iterationsInput, setIterationsInput] = useState("10000");
-  const iterations = Math.max(100, Math.min(1000000, Number(iterationsInput) || 10000));
+  const iterations = 10000; // Fixed value
 
   // Monte-Carlo-Prognose
   const monteCarloHistogram = React.useMemo(() => {
@@ -62,8 +61,6 @@ const Home: React.FC = () => {
           <div className="flex-responsive">
             <MonteCarloChart
               monteCarloHistogram={monteCarloHistogram}
-              iterationsInput={iterationsInput}
-              setIterationsInput={setIterationsInput}
             />
             <PercentilesDisplay percentiles={percentiles} />
           </div>
