@@ -1,64 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const IntegrationSection: React.FC = () => {
+  const [selectedIntegration, setSelectedIntegration] = useState<string | null>(null);
   const handleJiraClick = () => {
-    // TODO: Implement Jira integration
-    console.log('Jira integration clicked');
+    setSelectedIntegration('Jira');
   };
 
   const handleTrelloClick = () => {
-    // TODO: Implement Trello integration
-    console.log('Trello integration clicked');
+    setSelectedIntegration('Trello');
   };
 
   const handleMondayClick = () => {
-    // TODO: Implement Monday integration
-    console.log('Monday integration clicked');
+    setSelectedIntegration('Monday');
   };
 
   const handleAsanaClick = () => {
-    // TODO: Implement Asana integration
-    console.log('Asana integration clicked');
+    setSelectedIntegration('Asana');
   };
 
   const handleYouTrackClick = () => {
-    // TODO: Implement YouTrack integration
-    console.log('YouTrack integration clicked');
+    setSelectedIntegration('YouTrack');
   };
 
   const handleLinearClick = () => {
-    // TODO: Implement Linear integration
-    console.log('Linear integration clicked');
+    setSelectedIntegration('Linear');
   };
 
   const handleBasecampClick = () => {
-    // TODO: Implement Basecamp integration
-    console.log('Basecamp integration clicked');
+    setSelectedIntegration('Basecamp');
   };
 
   const handleRedmineClick = () => {
-    // TODO: Implement Redmine integration
-    console.log('Redmine integration clicked');
+    setSelectedIntegration('Redmine');
   };
 
   const handleGitHubClick = () => {
-    // TODO: Implement GitHub integration
-    console.log('GitHub integration clicked');
+    setSelectedIntegration('GitHub');
   };
 
   const handleGitLabClick = () => {
-    // TODO: Implement GitLab integration
-    console.log('GitLab integration clicked');
+    setSelectedIntegration('GitLab');
   };
 
   const handleClickUpClick = () => {
-    // TODO: Implement ClickUp integration
-    console.log('ClickUp integration clicked');
+    setSelectedIntegration('ClickUp');
   };
 
   const handleMoreClick = () => {
-    // TODO: Show more integration options
-    console.log('More integrations clicked');
+    setSelectedIntegration('Weitere Tools');
   };
 
   return (
@@ -511,6 +500,32 @@ const IntegrationSection: React.FC = () => {
           <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Mehr...</span>
         </button>
       </div>
+      
+      {selectedIntegration && (
+        <div style={{ 
+          marginTop: 16, 
+          padding: '16px 20px', 
+          backgroundColor: '#F8F9FA', 
+          borderRadius: 8, 
+          border: '1px solid #E9ECEF',
+          fontSize: 14,
+          color: '#495057',
+          lineHeight: 1.5
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#6C757D">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#6C757D"/>
+            </svg>
+            <span style={{ fontWeight: 600, color: '#495057' }}>
+              {selectedIntegration} Integration
+            </span>
+          </div>
+          <p style={{ margin: 0, color: '#6C757D' }}>
+            Wir arbeiten derzeit an der Integration mit {selectedIntegration}. Diese Funktion wird in Kürze verfügbar sein.
+          </p>
+        </div>
+      )}
+      
       <div style={{ marginTop: 16, fontSize: 14, color: '#666', lineHeight: 1.5 }}>
         <p style={{ margin: 0 }}>
           <strong>Verbinde deine Monte Carlo Prognose</strong> mit deinen Projektmanagement-Tools für eine nahtlose Arbeitsablauf-Integration.
