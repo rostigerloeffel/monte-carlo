@@ -49,7 +49,6 @@ const Home: React.FC = () => {
           remaining={remaining}
           setRemaining={setRemaining}
           values={values}
-          remainingValue={remainingValue}
         />
         <StoryPointsChart values={values} />
       </div>

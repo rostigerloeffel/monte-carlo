@@ -7,7 +7,6 @@ interface InputSectionProps {
   remaining: string;
   setRemaining: (value: string) => void;
   values: number[];
-  remainingValue: number;
 }
 
 const InputSection: React.FC<InputSectionProps> = ({
@@ -15,8 +14,7 @@ const InputSection: React.FC<InputSectionProps> = ({
   setInput,
   remaining,
   setRemaining,
-  values,
-  remainingValue
+  values
 }) => {
   const { t } = useLanguage();
 
