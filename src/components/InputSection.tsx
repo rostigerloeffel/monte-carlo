@@ -51,38 +51,18 @@ const InputSection: React.FC<InputSectionProps> = ({
           boxSizing: 'border-box'
         }}
       />
-      <div style={{ marginTop: 8 }}>
-        <strong>{t('input.story-points.detected')}</strong>
-        <span style={{ marginLeft: 8 }}>
-          {values.length === 0
-            ? <span style={{ color: '#888' }}>{t('input.story-points.none')}</span>
-            : values.join(', ')
-          }
-        </span>
-      </div>
       
-      {/* Basic Statistics */}
+      {/* Basic Statistics directly under input */}
       {values.length > 0 && (
         <div style={{ 
-          marginTop: 16, 
-          padding: '12px 16px', 
-          backgroundColor: '#f8f9fa', 
-          borderRadius: 8,
-          border: '1px solid #e9ecef'
+          marginTop: 8,
+          fontSize: 13,
+          color: '#666'
         }}>
-          <div style={{ 
-            fontSize: 14, 
-            fontWeight: 600, 
-            marginBottom: 8, 
-            color: '#495057' 
-          }}>
-            {t('statistics.basic')}
-          </div>
           <div style={{ 
             display: 'flex', 
             flexWrap: 'wrap', 
-            gap: '16px 24px',
-            fontSize: 13
+            gap: '16px 24px'
           }}>
             <div>
               {t('statistics.values-count')} <strong>{values.length}</strong>
