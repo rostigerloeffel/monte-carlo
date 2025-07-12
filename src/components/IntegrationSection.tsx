@@ -26,6 +26,16 @@ const IntegrationSection: React.FC = () => {
     console.log('YouTrack integration clicked');
   };
 
+  const handleLinearClick = () => {
+    // TODO: Implement Linear integration
+    console.log('Linear integration clicked');
+  };
+
+  const handleBasecampClick = () => {
+    // TODO: Implement Basecamp integration
+    console.log('Basecamp integration clicked');
+  };
+
   return (
     <div style={{ width: '100%', maxWidth: 900, marginTop: 24 }}>
       <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>Integration</h2>
@@ -215,6 +225,80 @@ const IntegrationSection: React.FC = () => {
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
           </svg>
           <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>YouTrack</span>
+        </button>
+        
+        <button
+          onClick={handleLinearClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#5E6AD2',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(94, 106, 210, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#4F5BC2';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(94, 106, 210, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#5E6AD2';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(94, 106, 210, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Linear</span>
+        </button>
+        
+        <button
+          onClick={handleBasecampClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#1D2D35',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(29, 45, 53, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#0F1D25';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(29, 45, 53, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#1D2D35';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(29, 45, 53, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Basecamp</span>
         </button>
       </div>
       <div style={{ marginTop: 16, fontSize: 14, color: '#666', lineHeight: 1.5 }}>
