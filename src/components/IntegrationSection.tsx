@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Counter } from 'counterapi';
 
+const counter = new Counter({ workspace: 'monte-carlo' });
+
 const IntegrationSection: React.FC = () => {
   const [selectedIntegration, setSelectedIntegration] = useState<string | null>(null);
   
@@ -17,62 +19,62 @@ const IntegrationSection: React.FC = () => {
 
   const handleJiraClick = () => {
     setSelectedIntegration('Jira');
-    trackClick('Jira');
+    counter.up('jira');
   };
 
   const handleTrelloClick = () => {
     setSelectedIntegration('Trello');
-    trackClick('Trello');
+    counter.up('trello');
   };
 
   const handleMondayClick = () => {
     setSelectedIntegration('Monday');
-    trackClick('Monday');
+    counter.up('monday');
   };
 
   const handleAsanaClick = () => {
     setSelectedIntegration('Asana');
-    trackClick('Asana');
+    counter.up('asana');
   };
 
   const handleYouTrackClick = () => {
     setSelectedIntegration('YouTrack');
-    trackClick('YouTrack');
+    counter.up('youtrack');
   };
 
   const handleLinearClick = () => {
     setSelectedIntegration('Linear');
-    trackClick('Linear');
+    counter.up('linear');
   };
 
   const handleBasecampClick = () => {
     setSelectedIntegration('Basecamp');
-    trackClick('Basecamp');
+    counter.up('basecamp');
   };
 
   const handleRedmineClick = () => {
     setSelectedIntegration('Redmine');
-    trackClick('Redmine');
+    counter.up('redmine');
   };
 
   const handleGitHubClick = () => {
     setSelectedIntegration('GitHub');
-    trackClick('GitHub');
+    counter.up('github');
   };
 
   const handleGitLabClick = () => {
     setSelectedIntegration('GitLab');
-    trackClick('GitLab');
+    counter.up('gitlab');
   };
 
   const handleClickUpClick = () => {
     setSelectedIntegration('ClickUp');
-    trackClick('ClickUp');
+    counter.up('clickup');
   };
 
   const handleMoreClick = () => {
     setSelectedIntegration('Weitere Tools');
-    trackClick('Weitere Tools');
+    counter.up('others');
   };
 
   return (
