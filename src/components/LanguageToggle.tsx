@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 
 const LanguageToggle: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
+  const { theme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -197,6 +199,13 @@ const LanguageToggle: React.FC = () => {
     }
   };
 
+  const getEffectiveTheme = () => {
+    if (theme === 'system') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return theme;
+  };
+
   const containerStyle = {
     position: 'fixed' as const,
     top: 20,
@@ -209,8 +218,8 @@ const LanguageToggle: React.FC = () => {
     height: 40,
     borderRadius: '50%',
     border: 'none',
-    backgroundColor: '#f8f9fa',
-    color: '#4a5568',
+    backgroundColor: getEffectiveTheme() === 'light' ? '#f8f9fa' : '#2d3748',
+    color: getEffectiveTheme() === 'light' ? '#4a5568' : '#e2e8f0',
     cursor: 'pointer',
     display: 'flex',
     alignItems: 'center',
@@ -225,8 +234,8 @@ const LanguageToggle: React.FC = () => {
     top: '100%',
     right: 0,
     marginTop: 8,
-    backgroundColor: '#ffffff',
-    border: '1px solid #e2e8f0',
+    backgroundColor: getEffectiveTheme() === 'light' ? '#ffffff' : '#2d3748',
+    border: `1px solid ${getEffectiveTheme() === 'light' ? '#e2e8f0' : '#4a5568'}`,
     borderRadius: 8,
     boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
     minWidth: 200,
@@ -238,22 +247,22 @@ const LanguageToggle: React.FC = () => {
     transition: 'all 0.2s ease',
     // Custom scrollbar
     scrollbarWidth: 'thin', // Firefox
-    scrollbarColor: '#b3b3b3 #f5f5f5', // Firefox
+    scrollbarColor: getEffectiveTheme() === 'light' ? '#b3b3b3 #f5f5f5' : '#4a5568 #2d3748', // Firefox
   } as React.CSSProperties;
 
   // Custom scrollbar for Webkit browsers
   const customScrollbar = `
     ::-webkit-scrollbar {
       width: 8px;
-      background: #f5f5f5;
+      background: ${getEffectiveTheme() === 'light' ? '#f5f5f5' : '#2d3748'};
       border-radius: 8px;
     }
     ::-webkit-scrollbar-thumb {
-      background: #b3b3b3;
+      background: ${getEffectiveTheme() === 'light' ? '#b3b3b3' : '#4a5568'};
       border-radius: 8px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #888;
+      background: ${getEffectiveTheme() === 'light' ? '#888' : '#718096'};
     }
   `;
 
@@ -263,7 +272,7 @@ const LanguageToggle: React.FC = () => {
     display: 'flex',
     alignItems: 'center',
     gap: 8,
-    color: '#4a5568',
+    color: getEffectiveTheme() === 'light' ? '#4a5568' : '#e2e8f0',
     fontSize: 14,
     border: 'none',
     backgroundColor: 'transparent',
