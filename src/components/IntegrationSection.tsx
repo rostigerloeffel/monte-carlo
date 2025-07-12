@@ -503,24 +503,25 @@ const IntegrationSection: React.FC = () => {
       
       {selectedIntegration && (
         <div style={{ 
-          marginTop: 16, 
-          padding: '16px 20px', 
-          backgroundColor: '#F8F9FA', 
-          borderRadius: 8, 
-          border: '1px solid #E9ECEF',
-          fontSize: 14,
-          color: '#495057',
-          lineHeight: 1.5
+          marginTop: 12, 
+          padding: '12px 16px', 
+          backgroundColor: 'rgba(0, 82, 204, 0.05)', 
+          borderRadius: 6, 
+          border: '1px solid rgba(0, 82, 204, 0.1)',
+          fontSize: 13,
+          color: '#4A5568',
+          lineHeight: 1.4,
+          transition: 'all 0.2s ease'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#6C757D">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#6C757D"/>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 6 }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#0052CC">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#0052CC"/>
             </svg>
-            <span style={{ fontWeight: 600, color: '#495057' }}>
+            <span style={{ fontWeight: 500, color: '#2D3748', fontSize: 13 }}>
               {selectedIntegration} Integration
             </span>
           </div>
-          <p style={{ margin: 0, color: '#6C757D' }}>
+          <p style={{ margin: 0, color: '#718096', fontSize: 12 }}>
             Wir arbeiten derzeit an der Integration mit {selectedIntegration}. Diese Funktion wird in Kürze verfügbar sein.
           </p>
         </div>
