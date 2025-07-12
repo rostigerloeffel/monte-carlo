@@ -18,11 +18,13 @@ const LanguageToggle: React.FC = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const getLanguageIcon = (lang: string) => {
+  const getLanguageIcon = (lang: string, isMainButton: boolean = false) => {
+    const size = isMainButton ? { width: '100%', height: '100%', minWidth: '20px', minHeight: '15px' } : { width: '16px', height: '12px' };
+    
     switch (lang) {
       case 'zh':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#DE2910"/>
             <polygon points="0,0 10,7.5 0,15" fill="#FFDE00"/>
             <polygon points="10,0 20,7.5 10,15" fill="#FFDE00"/>
@@ -31,7 +33,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'es':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FFD100"/>
             <rect y="5" width="20" height="5" fill="#FF0000"/>
             <rect width="20" height="5" fill="#FFD100"/>
@@ -40,7 +42,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'en':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#012169"/>
             <path d="M0 0L20 15M20 0L0 15" stroke="#FFF" strokeWidth="1"/>
             <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" strokeWidth="0.5"/>
@@ -50,7 +52,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'hi':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FF9933"/>
             <rect y="5" width="20" height="5" fill="#FFFFFF"/>
             <rect y="10" width="20" height="5" fill="#138808"/>
@@ -59,7 +61,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'de':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FFCE00"/>
             <rect y="5" width="20" height="5" fill="#D00"/>
             <rect y="10" width="20" height="5" fill="#000"/>
@@ -67,7 +69,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'fr':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="6.67" height="15" fill="#002395"/>
             <rect x="6.67" width="6.66" height="15" fill="#FFFFFF"/>
             <rect x="13.33" width="6.67" height="15" fill="#ED2939"/>
@@ -75,14 +77,14 @@ const LanguageToggle: React.FC = () => {
         );
       case 'ja':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#FFFFFF"/>
             <circle cx="10" cy="7.5" r="4" fill="#BC002D"/>
           </svg>
         );
       case 'ko':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#FFFFFF"/>
             <circle cx="10" cy="7.5" r="3" fill="#CD2E3A"/>
             <path d="M10 2.5L11.5 5L14 5L11.75 6.5L12.5 9L10 7.5L7.5 9L8.25 6.5L6 5L8.5 5L10 2.5Z" fill="#0047A0"/>
@@ -90,7 +92,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'it':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="6.67" height="15" fill="#009246"/>
             <rect x="6.67" width="6.66" height="15" fill="#FFFFFF"/>
             <rect x="13.33" width="6.67" height="15" fill="#CE2B37"/>
@@ -98,7 +100,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'ru':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FFFFFF"/>
             <rect y="5" width="20" height="5" fill="#0039A6"/>
             <rect y="10" width="20" height="5" fill="#D52B1E"/>
@@ -106,7 +108,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'pt':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#006600"/>
             <circle cx="10" cy="7.5" r="3" fill="#FFCC00"/>
             <circle cx="10" cy="7.5" r="2" fill="#006600"/>
@@ -114,7 +116,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'tr':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#E30A17"/>
             <circle cx="10" cy="7.5" r="3" fill="#FFFFFF"/>
             <circle cx="10" cy="7.5" r="2" fill="#E30A17"/>
@@ -122,14 +124,14 @@ const LanguageToggle: React.FC = () => {
         );
       case 'bn':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#006A4E"/>
             <circle cx="10" cy="7.5" r="3" fill="#F42A41"/>
           </svg>
         );
       case 'pa':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="7.5" fill="#FF9933"/>
             <rect y="7.5" width="20" height="7.5" fill="#138808"/>
             <circle cx="10" cy="7.5" r="1.5" fill="#000080"/>
@@ -137,14 +139,14 @@ const LanguageToggle: React.FC = () => {
         );
       case 'jv':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#FFFFFF"/>
             <rect width="20" height="7.5" fill="#FF0000"/>
           </svg>
         );
       case 'te':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FF9933"/>
             <rect y="5" width="20" height="5" fill="#FFFFFF"/>
             <rect y="10" width="20" height="5" fill="#138808"/>
@@ -153,7 +155,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'mr':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FF9933"/>
             <rect y="5" width="20" height="5" fill="#FFFFFF"/>
             <rect y="10" width="20" height="5" fill="#138808"/>
@@ -162,7 +164,7 @@ const LanguageToggle: React.FC = () => {
         );
       case 'ta':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="5" fill="#FF9933"/>
             <rect y="5" width="20" height="5" fill="#FFFFFF"/>
             <rect y="10" width="20" height="5" fill="#138808"/>
@@ -171,14 +173,14 @@ const LanguageToggle: React.FC = () => {
         );
       case 'vi':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#DA251D"/>
             <polygon points="10,2.5 12.5,7.5 17.5,7.5 13.75,10.5 15,15 10,12.5 5,15 6.25,10.5 2.5,7.5 7.5,7.5" fill="#FFFF00"/>
           </svg>
         );
       case 'ur':
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#FFFFFF"/>
             <rect width="20" height="5" fill="#01411C"/>
             <rect y="10" width="20" height="5" fill="#01411C"/>
@@ -187,7 +189,7 @@ const LanguageToggle: React.FC = () => {
         );
       default:
         return (
-          <svg width="100%" height="100%" viewBox="0 0 20 15" fill="none" style={{ minWidth: '20px', minHeight: '15px' }}>
+          <svg {...size} viewBox="0 0 20 15" fill="none" style={isMainButton ? { minWidth: '20px', minHeight: '15px' } : { flexShrink: 0 }}>
             <rect width="20" height="15" fill="#4A90E2"/>
             <circle cx="10" cy="7.5" r="3" fill="#FFF"/>
           </svg>
@@ -309,7 +311,7 @@ const LanguageToggle: React.FC = () => {
         }}
         title={t('language.select')}
       >
-        {getLanguageIcon(language)}
+        {getLanguageIcon(language, true)}
       </button>
       
       <div style={dropdownStyle}>
@@ -328,7 +330,7 @@ const LanguageToggle: React.FC = () => {
               e.currentTarget.style.backgroundColor = 'transparent';
             }}
           >
-            {getLanguageIcon(lang.code)}
+            {getLanguageIcon(lang.code, false)}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
               <span style={{ fontSize: 12, fontWeight: 500 }}>{lang.nativeName}</span>
               <span style={{ fontSize: 10, color: '#666' }}>{lang.name}</span>
