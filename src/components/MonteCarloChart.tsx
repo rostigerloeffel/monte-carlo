@@ -17,6 +17,7 @@ const MonteCarloChart: React.FC<MonteCarloChartProps> = ({
 
   return (
     <div style={{ 
+      marginTop: 16,
       width: '100%',
       maxWidth: '500px',
       minWidth: '280px'

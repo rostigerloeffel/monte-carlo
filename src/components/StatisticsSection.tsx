@@ -14,6 +14,7 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({ values, remaining
       <div style={{ 
         width: '100%', 
         maxWidth: '900px', 
+        marginTop: 16,
         padding: '0 1rem'
       }}>
         <h2 style={{ margin: '0 0 12px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>{t('statistics.title')}</h2>
@@ -28,6 +29,7 @@ const StatisticsSection: React.FC<StatisticsSectionProps> = ({ values, remaining
     <div style={{ 
       width: '100%', 
       maxWidth: '900px', 
+      marginTop: 16,
       padding: '0 1rem'
     }}>
       <h2 style={{ margin: '0 0 12px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>{t('statistics.title')}</h2>
