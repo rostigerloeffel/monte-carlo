@@ -6,16 +6,6 @@ const counter = new Counter({ workspace: 'monte-carlo' });
 const IntegrationSection: React.FC = () => {
   const [selectedIntegration, setSelectedIntegration] = useState<string | null>(null);
   
-  // Function to track button clicks
-  const trackClick = (integrationName: string) => {
-    try {
-      // Simple tracking without external library for now
-      console.log(`Integration clicked: ${integrationName}`);
-      // TODO: Implement proper tracking when counterapi is configured
-    } catch (error) {
-      console.log('Tracking not available:', error);
-    }
-  };
 
   const handleJiraClick = () => {
     setSelectedIntegration('Jira');
