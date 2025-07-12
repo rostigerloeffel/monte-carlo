@@ -1,12 +1,12 @@
 # Monte Carlo Simulation - Story Points Prognose Tool
 
-Ein kostenloses, interaktives Tool für Monte Carlo Simulationen zur Story Points Prognose in agilen Projekten. Verbessere deine Projektplanung mit statistischen Analysen und Integration mit beliebten Projektmanagement-Tools.
+Ein kostenloses, interaktives Tool für **Monte Carlo Simulationen** zur **Story Points Prognose** und **Estimation** in agilen Projekten. Verbessere deine **Projektplanung** mit statistischen Analysen und Integration mit beliebten **Project Management** Tools wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear und mehr.
 
 ## 🎯 Features
 
 - **Monte Carlo Simulationen** für präzise Story Points Prognosen
 - **Statistische Analysen** mit Visualisierungen und Prozentilen
-- **Integration mit Projektmanagement-Tools** wie Jira, Trello, Monday, Asana, YouTrack, Linear, Basecamp, Redmine, GitHub, GitLab, ClickUp und mehr
+- **Integration mit Project Management Tools** wie Jira, Asana, Monday, Redmine, YouTrack, Trello, Linear, Basecamp, GitHub, GitLab, ClickUp und mehr
 - **Responsive Design** für Desktop und Mobile
 - **Moderne React/TypeScript** Architektur
 - **Kostenlos und Open Source**
@@ -17,7 +17,7 @@ Ein kostenloses, interaktives Tool für Monte Carlo Simulationen zur Story Point
 
 ## 📊 Was ist Monte Carlo Simulation?
 
-Monte Carlo Simulationen sind eine statistische Methode zur Risikoanalyse und Prognose. In der agilen Projektplanung helfen sie dabei:
+**Monte Carlo Simulationen** sind eine statistische Methode zur Risikoanalyse und **Prognose**. In der agilen **Project Management** und **Estimation** helfen sie dabei:
 
 - **Realistische Zeitprognosen** basierend auf historischen Daten
 - **Risikoabschätzung** für Projektabschlüsse
@@ -75,8 +75,22 @@ npm run dev
 
 ## 🔍 SEO & Suchmaschinenoptimierung
 
-Diese Anwendung ist für optimale Auffindbarkeit in Suchmaschinen konfiguriert:
+Diese Anwendung ist für optimale Auffindbarkeit in Suchmaschinen konfiguriert und optimiert für folgende Suchbegriffe:
 
+### 🎯 Primäre Suchbegriffe:
+- **project management** - Projektmanagement Tools und Methoden
+- **estimation** - Schätzung und Prognose von Story Points
+- **monte carlo** - Monte Carlo Simulationen für Projektplanung
+- **prognosis** - Prognose und Vorhersage von Projektzeiten
+- **jira** - Jira Integration und Projektmanagement
+- **asana** - Asana Projektmanagement Tool
+- **monday** - Monday.com Projektmanagement
+- **redmine** - Redmine Projektmanagement System
+- **youtrack** - YouTrack Issue Tracking
+- **trello** - Trello Kanban Board Integration
+- **linear** - Linear Projektmanagement Tool
+
+### 📈 SEO Features:
 - **Meta Tags** für bessere Google-Indexierung
 - **Open Graph** Tags für Social Media Sharing
 - **Structured Data** (JSON-LD) für Rich Snippets
