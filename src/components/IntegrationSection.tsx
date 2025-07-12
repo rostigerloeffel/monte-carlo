@@ -11,6 +11,21 @@ const IntegrationSection: React.FC = () => {
     console.log('Trello integration clicked');
   };
 
+  const handleMondayClick = () => {
+    // TODO: Implement Monday integration
+    console.log('Monday integration clicked');
+  };
+
+  const handleAsanaClick = () => {
+    // TODO: Implement Asana integration
+    console.log('Asana integration clicked');
+  };
+
+  const handleYouTrackClick = () => {
+    // TODO: Implement YouTrack integration
+    console.log('YouTrack integration clicked');
+  };
+
   return (
     <div style={{ width: '100%', maxWidth: 900, marginTop: 24 }}>
       <h2 style={{ margin: '0 0 16px 0', fontSize: 22, fontWeight: 600, letterSpacing: 0.2 }}>Integration</h2>
@@ -89,6 +104,117 @@ const IntegrationSection: React.FC = () => {
             <path d="m55.3 40.6h-47.5c-4.1 0-7.4 3.3-7.4 7.4v47.6c0 4.1 3.3 7.4 7.4 7.4h47.5c4.1 0 7.4-3.3 7.4-7.4v-47.6c0-4.1-3.3-7.4-7.4-7.4zm-28.1 44.9c0 1.4-1.1 2.5-2.5 2.5h-10.4c-1.4 0-2.5-1.1-2.5-2.5v-30.9c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5zm24-14.2c0 1.4-1.1 2.5-2.4 2.5h-10.5c-1.4 0-2.5-1.1-2.5-2.5v-16.7c0-1.4 1.1-2.5 2.5-2.5h10.4c1.4 0 2.5 1.1 2.5 2.5z" fill="currentColor"/>
           </svg>
           <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Trello</span>
+        </button>
+        
+        <button
+          onClick={handleMondayClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#00CA72',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(0, 202, 114, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#00B363';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 202, 114, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#00CA72';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 202, 114, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Monday</span>
+        </button>
+        
+        <button
+          onClick={handleAsanaClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#F06A6A',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(240, 106, 106, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#E55A5A';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(240, 106, 106, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#F06A6A';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(240, 106, 106, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>Asana</span>
+        </button>
+        
+        <button
+          onClick={handleYouTrackClick}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            padding: '14px 20px',
+            backgroundColor: '#FF6B35',
+            color: 'white',
+            border: 'none',
+            borderRadius: 8,
+            cursor: 'pointer',
+            fontSize: 15,
+            fontWeight: 600,
+            boxShadow: '0 2px 8px rgba(255, 107, 53, 0.3)',
+            transition: 'all 0.2s ease',
+            minWidth: '120px',
+            justifyContent: 'center',
+            lineHeight: 1
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#E55A2B';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 107, 53, 0.4)';
+            e.currentTarget.style.transform = 'translateY(-2px)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#FF6B35';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 107, 53, 0.3)';
+            e.currentTarget.style.transform = 'translateY(0)';
+          }}
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/>
+          </svg>
+          <span style={{ display: 'inline-block', verticalAlign: 'baseline' }}>YouTrack</span>
         </button>
       </div>
       <div style={{ marginTop: 16, fontSize: 14, color: '#666', lineHeight: 1.5 }}>
