@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface InputSectionProps {
@@ -18,10 +18,25 @@ const InputSection: React.FC<InputSectionProps> = ({
 }) => {
   const { t } = useLanguage();
 
-  // Calculate basic statistics
-  const mean = values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0;
-  const min = values.length > 0 ? Math.min(...values) : 0;
-  const max = values.length > 0 ? Math.max(...values) : 0;
+  // Calculate basic statistics with useMemo
+  const statistics = useMemo(() => {
+    if (values.length === 0) {
+      return { mean: 0, min: 0, max: 0 };
+    }
+    const mean = values.reduce((a, b) => a + b, 0) / values.length;
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    return { mean, min, max };
+  }, [values]);
+
+  // Event handlers with useCallback
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setInput(e.target.value);
+  }, [setInput]);
+
+  const handleRemainingChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setRemaining(e.target.value);
+  }, [setRemaining]);
 
   return (
     <div id="input-section" style={{ 
@@ -38,7 +53,7 @@ const InputSection: React.FC<InputSectionProps> = ({
         id="number-list"
         type="text"
         value={input}
-        onChange={e => setInput(e.target.value)}
+        onChange={handleInputChange}
         placeholder={t('input.story-points.placeholder')}
         title={t('input.story-points.tooltip')}
         style={{ 
@@ -66,13 +81,13 @@ const InputSection: React.FC<InputSectionProps> = ({
               {t('statistics.values-count')} <strong>{values.length}</strong>
             </div>
             <div>
-              {t('statistics.mean')} <strong>{mean.toFixed(2)}</strong>
+              {t('statistics.mean')} <strong>{statistics.mean.toFixed(2)}</strong>
             </div>
             <div>
-              {t('statistics.min')} <strong>{min}</strong>
+              {t('statistics.min')} <strong>{statistics.min}</strong>
             </div>
             <div>
-              {t('statistics.max')} <strong>{max}</strong>
+              {t('statistics.max')} <strong>{statistics.max}</strong>
             </div>
           </div>
         </div>
@@ -86,7 +101,7 @@ const InputSection: React.FC<InputSectionProps> = ({
           id="remaining-work"
           type="number"
           value={remaining}
-          onChange={e => setRemaining(e.target.value)}
+          onChange={handleRemainingChange}
           placeholder={t('input.remaining.placeholder')}
           title={t('input.remaining.tooltip')}
           style={{ 

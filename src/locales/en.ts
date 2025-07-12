@@ -47,7 +47,7 @@ const en = {
   'chart.story-points.title': 'Story Points / Sprint:',
   'chart.story-points.x-axis': 'Sprint',
   'chart.story-points.y-axis': 'Story Points',
-  'monte-carlo.title': 'Monte Carlo Simulation',
+  'monte-carlo.title': 'Monte Carlo Prognose',
   'monte-carlo.subtitle': 'Story Points Forecast Tool',
   'monte-carlo.description': 'A free, interactive tool for Monte Carlo simulations for story points forecasting in agile projects.',
   'tour.start': 'Start tour',

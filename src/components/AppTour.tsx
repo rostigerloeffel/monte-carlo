@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import Joyride, { STATUS } from 'react-joyride';
-import type { Step, CallBackProps } from 'react-joyride';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import Tour from 'reactour';
 import { useLanguage } from '../context/LanguageContext';
+import { useTheme } from '../context/ThemeContext';
 
 interface AppTourProps {
   isVisible: boolean;
@@ -11,116 +11,137 @@ interface AppTourProps {
 
 const AppTour: React.FC<AppTourProps> = ({ isVisible, onClose, onInputChange }) => {
   const { t } = useLanguage();
-  const [run, setRun] = useState(false);
+  const { theme } = useTheme();
+  const [isTourOpen, setIsTourOpen] = useState(false);
+
+  // Get effective theme
+  const getEffectiveTheme = (): 'light' | 'dark' => {
+    if (theme === 'system') {
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    return theme;
+  };
+
+  const effectiveTheme = getEffectiveTheme();
 
   useEffect(() => {
     if (isVisible) {
-      // Verzögerung, um sicherzustellen, dass das Element gerendert ist
+      // Längere Verzögerung, um sicherzustellen, dass alle DOM-Elemente gerendert sind
       setTimeout(() => {
-        setRun(true);
-      }, 100);
+        // Überprüfe, ob das Target-Element existiert
+        const targetElement = document.querySelector('#number-list');
+        if (targetElement) {
+          setIsTourOpen(true);
+        } else {
+          // Falls das Element nicht existiert, versuche es nochmal nach einer weiteren Verzögerung
+          setTimeout(() => {
+            setIsTourOpen(true);
+          }, 300);
+        }
+      }, 500);
+    } else {
+      setIsTourOpen(false);
     }
   }, [isVisible]);
 
-  const steps: Step[] = [
+  const steps = useMemo(() => [
     {
-      target: '#number-list',
+      selector: '#number-list',
       content: t('tour.step1'),
-      placement: 'bottom'
+      action: () => onInputChange?.('3, 6, 6, 3, 8, 8, 7, 13, 2, 5', ''),
     },
     {
-      target: '#input-section',
+      selector: '#input-section',
       content: t('tour.step2'),
-      placement: 'bottom'
+      action: () => onInputChange?.('3, 6, 6, 3, 8, 8, 7, 13, 2, 5', '150'),
     },
     {
-      target: '.statistics-section',
+      selector: '.statistics-section',
       content: t('tour.step3'),
-      placement: 'top',
     },
     {
-      target: '.avg-case',
+      selector: '.avg-case',
       content: t('tour.step4'),
-      placement: 'top',
     },
     {
-      target: '.best-case',
+      selector: '.best-case',
       content: t('tour.step5'),
-      placement: 'top',
     },
     {
-      target: '.worst-case',
+      selector: '.worst-case',
       content: t('tour.step6'),
-      placement: 'top',
     },
     {
-      target: '.percentiles-section',
+      selector: '.percentiles-section',
       content: t('tour.step7'),
-      placement: 'left',
     },
     {
-      target: '.integration-section',
+      selector: '.integration-section',
       content: t('tour.step8'),
-      placement: 'top',
     },
-  ];
+  ], [t, onInputChange]);
 
-  const handleCallback = (data: CallBackProps) => {
-    const { status, index } = data;
-    
-    // Setze Beispielwerte während der Tour
-    if (index === 0 && status === STATUS.RUNNING) {
-      // Erste Eingabe: Story Points
-      onInputChange?.('3, 6, 6, 3, 8, 8, 7, 13, 2, 5', '');
-    } else if (index === 1 && status === STATUS.RUNNING) {
-      // Zweite Eingabe: Verbleibende Story Points
-      onInputChange?.('3, 6, 6, 3, 8, 8, 7, 13, 2, 5', '150');
-    }
-    
-    if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
-      // Lösche die Beispielwerte am Ende der Tour
-      onInputChange?.('', '');
-      setRun(false);
-      onClose();
-    }
-  };
+  const handleClose = useCallback(() => {
+    setIsTourOpen(false);
+    // Lösche die Beispielwerte am Ende der Tour
+    onInputChange?.('', '');
+    onClose();
+  }, [onClose, onInputChange]);
 
   if (!isVisible) return null;
 
   return (
-    <Joyride
-      steps={steps}
-      run={run}
-      continuous
-      showProgress
-      showSkipButton
-      callback={handleCallback}
-      styles={{
-        options: {
-          primaryColor: '#0052CC',
-          zIndex: 1000,
-        },
-        tooltip: {
-          fontSize: 14,
-        },
-        buttonNext: {
-          backgroundColor: '#0052CC',
-        },
-        buttonBack: {
-          marginRight: 10,
-        },
-        buttonSkip: {
-          color: '#666',
-        },
-      }}
-      locale={{
-        back: t('tour.back'),
-        close: t('tour.close'),
-        last: t('tour.finish'),
-        next: t('tour.next'),
-        skip: t('tour.skip'),
-      }}
-    />
+    <>
+      <style>
+        {`
+          .reactour__helper {
+            background-color: ${effectiveTheme === 'dark' ? '#1a1a1a' : '#ffffff'} !important;
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+            border: 1px solid ${effectiveTheme === 'dark' ? '#404040' : '#e1e5e9'} !important;
+          }
+          .reactour__helper__content {
+            background-color: ${effectiveTheme === 'dark' ? '#1a1a1a' : '#ffffff'} !important;
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+          }
+          .reactour__helper__footer {
+            background-color: ${effectiveTheme === 'dark' ? '#1a1a1a' : '#ffffff'} !important;
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+          }
+          .reactour__close {
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+          }
+          .reactour__navigation {
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+          }
+          .reactour__navigation button {
+            background-color: ${effectiveTheme === 'dark' ? '#1a1a1a' : '#f9f9f9'} !important;
+            color: ${effectiveTheme === 'dark' ? 'rgba(255, 255, 255, 0.87)' : '#213547'} !important;
+            border: 1px solid ${effectiveTheme === 'dark' ? '#404040' : '#e1e5e9'} !important;
+          }
+          .reactour__navigation button:hover {
+            background-color: ${effectiveTheme === 'dark' ? '#2a2a2a' : '#f0f0f0'} !important;
+          }
+        `}
+      </style>
+      <Tour
+        steps={steps}
+        isOpen={isTourOpen}
+        onRequestClose={handleClose}
+        showNavigation={true}
+        showNavigationNumber={true}
+        showButtons={true}
+        showCloseButton={true}
+        showBadge={true}
+        accentColor="#0052CC"
+        inViewThreshold={10}
+        scrollDuration={0.5}
+        scrollOffset={-100}
+        disableInteraction={false}
+        disableDotsNavigation={false}
+        disableKeyboardNavigation={false}
+        closeWithMask={true}
+      />
+    </>
   );
 };
 

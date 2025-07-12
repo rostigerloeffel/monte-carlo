@@ -158,3 +158,133 @@ input {
     min-height: 250px;
   }
 }
+
+/* Reactour theme styles */
+[data-theme="light"] .reactour__popover {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+  border: 1px solid #e1e5e9 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="dark"] .reactour__popover {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+  border: 1px solid #404040 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="light"] .reactour__popover-arrow {
+  background-color: #ffffff !important;
+  border-color: #e1e5e9 !important;
+}
+
+[data-theme="dark"] .reactour__popover-arrow {
+  background-color: #1a1a1a !important;
+  border-color: #404040 !important;
+}
+
+[data-theme="light"] .reactour__close {
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__close {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-theme="light"] .reactour__navigation {
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__navigation {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-theme="light"] .reactour__navigation button {
+  background-color: #f9f9f9 !important;
+  color: #213547 !important;
+  border: 1px solid #e1e5e9 !important;
+}
+
+[data-theme="dark"] .reactour__navigation button {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+  border: 1px solid #404040 !important;
+}
+
+[data-theme="light"] .reactour__navigation button:hover {
+  background-color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .reactour__navigation button:hover {
+  background-color: #2a2a2a !important;
+}
+
+[data-theme="light"] .reactour__badge {
+  background-color: #0052CC !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .reactour__badge {
+  background-color: #0052CC !important;
+  color: #ffffff !important;
+}
+
+/* Additional reactour styles with different class names */
+[data-theme="light"] .reactour__helper {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__helper {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-theme="light"] .reactour__helper__content {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__helper__content {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+[data-theme="light"] .reactour__helper__footer {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__helper__footer {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Override any inline styles */
+[data-theme="light"] [class*="reactour"] {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+}
+
+[data-theme="dark"] [class*="reactour"] {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Specific override for popover content */
+[data-theme="light"] .reactour__popover,
+[data-theme="light"] .reactour__helper,
+[data-theme="light"] .reactour__helper__content,
+[data-theme="light"] .reactour__helper__footer {
+  background-color: #ffffff !important;
+  color: #213547 !important;
+}
+
+[data-theme="dark"] .reactour__popover,
+[data-theme="dark"] .reactour__helper,
+[data-theme="dark"] .reactour__helper__content,
+[data-theme="dark"] .reactour__helper__footer {
+  background-color: #1a1a1a !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}

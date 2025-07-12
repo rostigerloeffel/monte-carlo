@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
 interface TourButtonProps {
@@ -8,9 +8,23 @@ interface TourButtonProps {
 const TourButton: React.FC<TourButtonProps> = ({ onStartTour }) => {
   const { t } = useLanguage();
 
+  const handleClick = useCallback(() => {
+    onStartTour();
+  }, [onStartTour]);
+
+  const handleMouseEnter = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.currentTarget.style.background = 'rgba(0, 82, 204, 0.2)';
+    e.currentTarget.style.transform = 'scale(1.1)';
+  }, []);
+
+  const handleMouseLeave = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.currentTarget.style.background = 'rgba(0, 82, 204, 0.1)';
+    e.currentTarget.style.transform = 'scale(1)';
+  }, []);
+
   return (
     <button
-      onClick={onStartTour}
+      onClick={handleClick}
       title={t('tour.start')}
       style={{
         position: 'fixed',
@@ -31,14 +45,8 @@ const TourButton: React.FC<TourButtonProps> = ({ onStartTour }) => {
         transition: 'all 0.2s ease',
         backdropFilter: 'blur(10px)',
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.background = 'rgba(0, 82, 204, 0.2)';
-        e.currentTarget.style.transform = 'scale(1.1)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.background = 'rgba(0, 82, 204, 0.1)';
-        e.currentTarget.style.transform = 'scale(1)';
-      }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       ?
     </button>

@@ -6,7 +6,7 @@ import ThemeToggle from './components/ThemeToggle';
 import LanguageToggle from './components/LanguageToggle';
 import AppTour from './components/AppTour';
 import TourButton from './components/TourButton';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 function App() {
   const [showTour, setShowTour] = useState(false);
@@ -23,18 +23,18 @@ function App() {
     }
   }, []);
 
-  const handleStartTour = () => {
+  const handleStartTour = useCallback(() => {
     setShowTour(true);
-  };
+  }, []);
 
-  const handleCloseTour = () => {
+  const handleCloseTour = useCallback(() => {
     setShowTour(false);
-  };
+  }, []);
 
-  const handleTourInputChange = (newInput: string, newRemaining: string) => {
+  const handleTourInputChange = useCallback((newInput: string, newRemaining: string) => {
     setInput(newInput);
     setRemaining(newRemaining);
-  };
+  }, []);
 
   return (
     <LanguageProvider>
