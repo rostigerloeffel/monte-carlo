@@ -51,7 +51,7 @@ const Home: React.FC<HomeProps> = ({
       flexDirection: 'column', 
       alignItems: 'center', 
       justifyContent: 'center', 
-      minHeight: '100vh',
+      minHeight: '100%',
       width: '100%',
       maxWidth: '100vw',
       overflowX: 'hidden'
